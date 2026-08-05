@@ -118,7 +118,7 @@
         </span>
       </a>
 
-      <!-- Desktop Nav Links (Hidden on Mobile) -->
+      <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center space-x-1 font-mono text-[11px] text-brand-grayText shrink-0">
         <a href="#abstract" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap">SCOPE</a>
         <a href="#architecture" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap">ARCHITECTURE</a>
@@ -213,7 +213,7 @@
             <span>EXHIBITION QUICK SUMMARY (IN SIMPLE WORDS)</span>
           </div>
           <p class="text-xs sm:text-sm text-amber-100/90 leading-relaxed">
-            <strong>What is PAXIS?</strong> PAXIS is an intelligent safety system that uses ground cameras, computer software, and a civilian quadcopter drone to watch crowded areas like railway stations, schools, stadium exits, air raid shelters, and refugee camps. If an emergency happens and people panic, PAXIS detects dangerous crowding in seconds and triggers warning lights and sirens before a stampede can start.
+            <strong>What is PAXIS?</strong> PAXIS is an intelligent safety system that uses ground cameras, computer vision software, and a civilian quadcopter drone to watch crowded areas like railway stations, schools, stadium exits, air raid shelters, and refugee camps. It predicts stampedes before they start and detects fallen individuals or casualties so rescue teams can respond immediately.
           </p>
         </div>
 
@@ -228,8 +228,8 @@
             <span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono">Spatial Coverage</span>
           </div>
           <div class="glass-card p-3 text-center bouncy-hover">
-            <span class="text-xl sm:text-2xl font-bold text-brand-brightBlue block font-mono">100%</span>
-            <span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono">Civilian Focus</span>
+            <span class="text-xl sm:text-2xl font-bold text-brand-brightBlue block font-mono">Automated</span>
+            <span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono">Casualty Counting</span>
           </div>
           <div class="glass-card p-3 text-center bouncy-hover">
             <span class="text-xl sm:text-2xl font-bold text-white block font-mono">Dual-Layer</span>
@@ -260,7 +260,7 @@
                 <span>💡 IN SIMPLE WORDS</span>
               </div>
               <p class="text-xs sm:text-sm text-white leading-relaxed">
-                In times of fire, sudden alarms, or war evacuations, most injuries happen because scared people rush to the same narrow exit at once. Traditional security cameras only watch and record; they don't predict danger. PAXIS uses smart software to spot panic instantly and warn people before crushing occurs.
+                In times of fire, sudden alarms, or war evacuations, most injuries happen because scared people rush to the same narrow exit at once. PAXIS predicts crowding panic beforehand and includes an AI counting feature that spots fallen or injured persons on the ground, allowing rescue personnel to navigate directly to victims without delay.
               </p>
             </div>
 
@@ -268,19 +268,19 @@
               During military conflicts, severe industrial disasters, or regional crises, civilians gather in dense clusters at safe zones, border evacuation checkpoints, air-raid shelters, refugee transit camps, and disaster relief centers. Similarly, high-density public venues—such as railway stations, shopping malls, religious gatherings, stadiums, and school emergency assembly points—experience acute congestion during sudden alarms.
             </p>
             <p>
-              In these high-stress situations, instinctual panic triggers immediate mass egress. Casualties frequently stem not directly from the initial threat, but from uncontrolled crush pressures and bottlenecks occurring within seconds.
+              In these high-stress situations, instinctual panic triggers immediate mass egress. Casualties frequently stem not directly from the initial threat, but from uncontrolled crush pressures, bottlenecks, and unobserved fallen individuals trapped underfoot.
             </p>
             <p>
-              Traditional CCTV networks record events passively but fail to provide predictive situational awareness due to physical blind spots and human operator fatigue during chaotic incidents.
+              Traditional CCTV networks record events passively but fail to provide predictive situational awareness or automated casualty localization due to physical blind spots and operator exhaustion during chaotic incidents.
             </p>
             <p>
-              <strong class="text-white">PAXIS</strong> bridges this gap by combining Ground Vision Monitoring with a civilian Aerial Surveillance Module (ASM). Computer vision algorithms calculate crowd density metrics, velocity vectors, and running anomalies in real time, triggering immediate edge-level alerts via Arduino edge hardware while the drone offers real-time aerial verification.
+              <strong class="text-white">PAXIS</strong> bridges this gap by combining Ground Vision Monitoring with a civilian Aerial Surveillance Module (ASM). Computer vision algorithms calculate crowd density metrics, velocity vectors, running anomalies, and fallen human body locations in real time—triggering immediate edge-level alerts via Arduino edge hardware while the drone offers real-time aerial verification.
             </p>
 
             <div class="glass-card-accent p-4 border-l-4 border-l-brand-cyan mt-6">
               <div class="text-xs font-mono font-bold text-brand-cyan uppercase mb-1">War &amp; Peace Relevance</div>
               <p class="text-xs text-brand-lightGray leading-relaxed">
-                Peace is defined by the active protection of human life. PAXIS serves as a non-offensive, dual-use technological shield for humanitarian corridors and evacuation points, ensuring orderly mass movement and preventing panic casualties.
+                Peace is defined by the active protection of human life. By detecting crush hazards and locating fallen individuals in humanitarian corridors, PAXIS provides a non-offensive technological shield for rapid rescue operations.
               </p>
             </div>
           </div>
@@ -302,8 +302,12 @@
               <g fill="#2997ff">
                 <circle cx="130" cy="193" r="3"/><circle cx="140" cy="188" r="3"/><circle cx="150" cy="199" r="3"/>
               </g>
+              
+              <!-- Highlighted Fallen Casualty Detection Point -->
               <ellipse cx="145" cy="193" rx="35" ry="14" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="2 2"/>
-              <text x="115" y="170" fill="#ef4444" font-family="monospace" font-size="7" font-weight="bold">PANIC BOTTLENECK</text>
+              <circle cx="145" cy="195" r="2.5" fill="#ef4444" />
+              <text x="110" y="170" fill="#ef4444" font-family="monospace" font-size="7" font-weight="bold">CASUALTY / FALLEN PERSON</text>
+
               <path d="M30 175 L30 95" stroke="#ffffff" stroke-width="1.5"/>
               <circle cx="30" cy="93" r="4" fill="#0071e3"/>
               <polygon points="30,93 80,170 160,170" fill="#0071e3" opacity="0.2"/>
@@ -315,7 +319,7 @@
               </g>
             </svg>
             <div class="text-[10px] font-mono text-brand-grayText bg-white/5 p-2 rounded">
-              Multi-angle spatial telemetry preventing density threshold breach in evacuation zones.
+              Multi-angle spatial telemetry detecting crowd panic vectors and fallen human body locations.
             </div>
           </div>
         </div>
@@ -702,7 +706,7 @@
 
       if (navHeader && navPill) {
         if (winScroll > 40) {
-          // Compact scroll state - elegant frosted glass without cutting text!
+          // Compact scroll state
           navHeader.classList.remove('top-5', 'max-w-5xl');
           navHeader.classList.add('top-2', 'max-w-4xl');
           
@@ -801,19 +805,19 @@
         simple: "Smart video software that converts raw video pictures into motion measurements."
       },
       mediapipe: { 
-        title: "MediaPipe Spatial Analytics", 
-        desc: "Extracts body pose landmarks and bounding boxes to estimate individual velocity and directional vectors.",
-        simple: "Software that tracks individual human movement speed and direction to detect sudden running."
+        title: "MediaPipe Spatial Analytics & Pose Estimator", 
+        desc: "Extracts body pose landmarks and bounding boxes to estimate individual velocity, directional vectors, and horizontal (fallen person) orientation.",
+        simple: "Software that tracks human movements and identifies when someone has fallen down or stopped moving."
       },
       ml: { 
-        title: "Crowd Analytics & Risk Engine", 
-        desc: "Evaluates directional chaos, density thresholds, and sudden acceleration to compute overall panic index.",
-        simple: "The AI brain that calculates if a crowd is starting to panic or crush together dangerously."
+        title: "Crowd Analytics & Casualty Counting Risk Engine", 
+        desc: "Evaluates directional chaos, density thresholds, acceleration spikes, and non-responsive pose counts to compute overall panic and extraction priorities.",
+        simple: "The AI brain that detects if a crowd is starting to panic and counts how many fallen people need urgent rescue."
       },
       arduino: { 
         title: "Arduino Edge Actuator", 
         desc: "Receives serial signal triggers from host workstation to actuate localized hardware alarms instantaneously.",
-        simple: "A reliable micro-chip controller that directly triggers the physical alarm lights and buzzers."
+        simple: "A reliable micro-chip controller that directly triggers physical alarm lights and sirens."
       },
       actuator: { 
         title: "Visual & Acoustic Warning Array", 
@@ -856,15 +860,15 @@
         components: ["Composite Quadcopter Frame", "Brushless Flight Motors", "2.4GHz Receiver", "Aerial ESP32-CAM Node"]
       },
       processing: {
-        title: "Central Processing & AI Host Engine",
-        desc: "High-performance computational workstation receiving concurrent video feeds. Executes OpenCV optical flow tracking, MediaPipe spatial pose evaluation, and automated risk scoring algorithms.",
+        title: "Central Processing Engine & Casualty Analytics",
+        desc: "High-performance computational workstation receiving concurrent video feeds. Executes OpenCV optical flow tracking, MediaPipe spatial pose evaluation, casualty/fallen body counting, and automated risk scoring algorithms.",
         specs: [
           "Vision Pipeline: OpenCV 4.x + MediaPipe Python Runtime",
+          "Casualty Analytics: Horizontal pose detection & non-responsive time tracking",
           "Frame Processing Latency: ~33ms per frame (30 FPS pipeline)",
-          "Panic Score Output: Scaled Risk Index (0 - 100) computed in real-time",
-          "Communications: Serial USB / RS232 link to Arduino Edge Controller"
+          "Panic Score Output: Scaled Risk Index (0 - 100) computed in real-time"
         ],
-        components: ["Multi-core Host Laptop", "OpenCV Frame Ingestion Module", "MediaPipe Pose Estimator", "Serial Dispatcher"]
+        components: ["Multi-core Host Laptop", "OpenCV Frame Ingestion Module", "MediaPipe Pose & Casualty Estimator", "Serial Dispatcher"]
       },
       alert: {
         title: "Edge Alert & Actuation Unit",
@@ -988,9 +992,9 @@
       {
         id: "COMP-04",
         title: "Workstation Processing Host",
-        purpose: "Primary computational engine executing computer vision pipeline.",
+        purpose: "Primary computational engine executing computer vision & casualty counting pipeline.",
         overview: "High-performance multi-core laptop processing live camera streams.",
-        whySelected: "Capable of real-time MediaPipe pose estimation across multiple feeds.",
+        whySelected: "Capable of real-time MediaPipe pose estimation & casualty detection across multiple feeds.",
         role: "Runs OpenCV, MediaPipe, Risk Engine, and outputs serial alert triggers.",
         interface: "USB 3.0 / Wi-Fi / Ethernet",
         power: "19V DC Power Adapter",
@@ -1077,8 +1081,8 @@
       border: {
         title: "Border Evacuation Checkpoints",
         problem: "Mass refugee queues accumulating at narrow transit gates under extreme stress and rumor propagation.",
-        solution: "Dual-layer monitoring tracks queue growth rates and flags sudden directional surges toward border gates.",
-        benefits: "Ensures orderly civilian processing and prevents dangerous overcrowding at border control posts."
+        solution: "Dual-layer monitoring tracks queue growth rates and flags sudden directional surges or fallen bodies near gates.",
+        benefits: "Ensures orderly civilian processing and alerts medical responders to fallen individuals in dense crowds."
       },
       shelter: {
         title: "Disaster Relief & Air Raid Shelters",
@@ -1115,22 +1119,23 @@
         <div class="space-y-4">
           <div class="glass-card-accent p-3 border-l-4 border-l-brand-cyan">
             <span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block">DOCS-01 // MATHEMATICAL &amp; ALGORITHMIC MODELS</span>
-            <h4 class="text-sm font-bold text-white">PAXIS Crowd Risk &amp; Turbulence Derivations</h4>
+            <h4 class="text-sm font-bold text-white">PAXIS Crowd Risk &amp; Casualty Counting Derivations</h4>
           </div>
 
           <div class="bg-amber-500/10 border border-amber-500/30 p-3 rounded-lg text-xs text-amber-100 leading-relaxed">
-            <strong>💡 Simple Explanation:</strong> The AI measures two main things: (1) how tightly packed people are, and (2) how fast/chaotically people are moving. If both get too high, it triggers the alarm.
+            <strong>💡 Simple Explanation:</strong> The AI measures three main things: (1) how tightly packed people are, (2) how fast/chaotically people are moving, and (3) whether anyone has fallen down and stopped moving. If danger is detected, it triggers alarms and marks casualty locations for rescue teams.
           </div>
 
-          <p class="text-xs leading-relaxed">The core AI risk engine calculates crowd panic probability using spatial density ($\rho$) and velocity vector variance ($T$):</p>
+          <p class="text-xs leading-relaxed">The core AI risk engine calculates crowd panic probability using spatial density ($\rho$), velocity vector variance ($T$), and non-responsive pose count ($C_{fallen}$):</p>
 
           <div class="bg-black/60 p-3 rounded-xl border border-white/10 font-mono text-[11px] space-y-1 text-brand-cyan">
             <div>1. Spatial Density: &rho; = N / A  (Humans per m²)</div>
             <div>2. Velocity Turbulence Index: T = &sqrt;(&sigma;<sub>vx</sub>² + &sigma;<sub>vy</sub>²)</div>
-            <div>3. Panic Index Score: R = (&alpha; &middot; &rho;) + (&beta; &middot; T) + (&gamma; &middot; a<sub>mean</sub>)</div>
+            <div>3. Casualty Index: C<sub>fallen</sub> = &sum; Pose(horizontal_angle > 60&deg; AND velocity &approx; 0)</div>
+            <div>4. Panic Index Score: R = (&alpha; &middot; &rho;) + (&beta; &middot; T) + (&gamma; &middot; C<sub>fallen</sub>)</div>
           </div>
 
-          <p class="text-xs leading-relaxed">When the computed Risk Index $R$ exceeds threshold $R_{crit} = 75$, the serial interface dispatches an instantaneous trigger pulse to the edge Arduino controller to actuate visual strobes and acoustic buzzers.</p>
+          <p class="text-xs leading-relaxed">When the computed Risk Index $R$ exceeds threshold $R_{crit} = 75$, the serial interface dispatches an instantaneous trigger pulse to the edge Arduino controller to actuate visual strobes and acoustic buzzers while transmitting casualty coordinates to medical teams.</p>
         </div>
       `,
       "Component Database": `
