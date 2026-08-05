@@ -1,0 +1,1271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px 'Helvetica Neue'; color: #1b1f22; -webkit-text-stroke: #1b1f22}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px 'Helvetica Neue'; color: #1b1f22; -webkit-text-stroke: #1b1f22; min-height: 29.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en" class="scroll-smooth"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;PAXIS v2.0 - AI Powered Crowd Safety &amp; Early Warning Platform&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>tailwind.config = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>theme: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>extend: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>colors: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>brand: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>black: '#090909',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>card: 'rgba(255, 255, 255, 0.035)',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>border: 'rgba(255, 255, 255, 0.12)',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>blue: '#0071e3',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>cyan: '#06b6d4',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>brightBlue: '#2997ff',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>grayText: '#86868b',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>lightGray: '#f5f5f7'</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>fontFamily: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>sans: ['Inter', 'sans-serif'],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>mono: ['JetBrains Mono', 'monospace'],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #090909;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #f5f5f7;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Inter', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-webkit-font-smoothing: antialiased;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>overflow-x: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.glass-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(255, 255, 255, 0.035);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(20px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-webkit-backdrop-filter: blur(20px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 0.8px solid rgba(255, 255, 255, 0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.glass-card:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-color: rgba(6, 182, 212, 0.4);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 8px 30px -8px rgba(6, 182, 212, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.glass-card-accent {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(0, 113, 227, 0.05) 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(20px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 0.8px solid rgba(6, 182, 212, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tech-grid-bg {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-size: 28px 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.glow-cyan {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 40px -5px rgba(6, 182, 212, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.glow-blue {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 40px -5px rgba(0, 113, 227, 0.35);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Subtle Micro-Animations */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.bouncy-hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, border-color 0.2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.bouncy-hover:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: translateY(-2px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.bouncy-hover:active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: translateY(1px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Custom Scrollbar */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar-track {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #090909;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar-thumb {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #27272a;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>::-webkit-scrollbar-thumb:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #06b6d4;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.no-scrollbar::-webkit-scrollbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.no-scrollbar {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-ms-overflow-style: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>scrollbar-width: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body class="tech-grid-bg relative"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ==================== FLOATING PILL-SHAPED GLASS NAVBAR ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header id="nav-header" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl transition-all duration-300 ease-out"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="nav-pill" class="glass-card rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between border border-white/15 bg-[#090909]/70 backdrop-blur-2xl shadow-2xl transition-all duration-300"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Brand Logo --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#hero" class="flex items-center space-x-2.5 group bouncy-hover shrink-0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="w-3 h-3 rounded-full bg-brand-cyan animate-pulse shadow-[0_0_12px_#06b6d4]"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span class="font-extrabold text-sm sm:text-base text-white tracking-wider flex items-center whitespace-nowrap"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>PAXIS<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-[10px] font-mono font-normal text-brand-cyan border border-brand-cyan/30 px-2 py-0.5 rounded-full ml-1.5 bg-brand-cyan/10"&gt;v2.0&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Desktop Nav Links (Hidden on Mobile) --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;nav class="hidden md:flex items-center space-x-1 font-mono text-[11px] text-brand-grayText shrink-0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#abstract" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap"&gt;SCOPE&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#architecture" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap"&gt;ARCHITECTURE&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#ecosystem" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap"&gt;ECOSYSTEM&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#catalog" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap"&gt;CATALOGUE&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#deployments" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap"&gt;DEPLOYMENTS&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="#doc-hub" class="nav-link px-3 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all whitespace-nowrap"&gt;DOCS HUB&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Action Buttons --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center space-x-2 shrink-0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button onclick="openDocHubModal('Technical Documentation')" class="px-3 sm:px-3.5 py-1.5 rounded-full glass-card text-[11px] font-mono text-brand-brightBlue flex items-center space-x-1.5 border-brand-blue/40 bg-brand-blue/10 hover:bg-brand-blue/20 bouncy-hover whitespace-nowrap"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;svg class="w-3.5 h-3.5 text-brand-brightBlue shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/&gt;&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="font-bold hidden sm:inline"&gt;DOCS MODE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Mobile 3-Bar Hamburger Menu Button --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-full border border-white/15 bg-white/5 text-brand-cyan hover:bg-white/10 transition bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/&gt;&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Scroll Progress Indicator Bar --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="scroll-progress" class="h-[2px] bg-gradient-to-r from-brand-cyan via-brand-brightBlue to-white w-0 transition-all duration-150 mx-auto rounded-full mt-1 opacity-80"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ==================== MOBILE MENU OVERLAY ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="mobile-menu" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-2xl hidden flex flex-col justify-between p-6 transition-all duration-300"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="flex justify-between items-center border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="flex items-center space-x-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="w-3 h-3 rounded-full bg-brand-cyan animate-pulse"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span class="font-extrabold text-white text-base font-mono"&gt;PAXIS v2.0 NAVIGATOR&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;button onclick="toggleMobileMenu()" class="px-3 py-1 rounded-full border border-white/15 bg-white/5 text-white font-mono text-xs"&gt;✕ CLOSE&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="flex flex-col space-y-3 my-auto font-mono text-sm text-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#abstract" onclick="toggleMobileMenu()" class="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:border-brand-cyan"&gt;SCOPE&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#architecture" onclick="toggleMobileMenu()" class="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:border-brand-cyan"&gt;ARCHITECTURE&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#ecosystem" onclick="toggleMobileMenu()" class="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:border-brand-cyan"&gt;ECOSYSTEM&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#catalog" onclick="toggleMobileMenu()" class="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:border-brand-cyan"&gt;CATALOGUE&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#deployments" onclick="toggleMobileMenu()" class="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:border-brand-cyan"&gt;DEPLOYMENTS&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a href="#doc-hub" onclick="toggleMobileMenu()" class="py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:border-brand-cyan"&gt;DOCS HUB&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="pt-4 border-t border-white/10 text-center font-mono text-xs text-brand-grayText"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span&gt;STEAM Exhibition • War or Peace Theme&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;main class="pt-24"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== HERO SECTION ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="hero" class="min-h-[90vh] relative flex items-center justify-center px-4 sm:px-6 py-16 overflow-hidden"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Particle Canvas Effect --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;canvas id="hero-canvas" class="absolute inset-0 pointer-events-none opacity-40"&gt;&lt;/canvas&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-5xl mx-auto text-center z-10 space-y-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full glass-card border-brand-cyan/30 text-xs font-mono text-brand-cyan bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span&gt;STEAM EXHIBITION • WAR OR PEACE THEME&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-none"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>PAXIS &lt;span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-brightBlue to-white"&gt;2.0&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-xl sm:text-2xl lg:text-3xl font-light text-brand-lightGray max-w-3xl mx-auto leading-tight"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>AI Powered Crowd Safety &amp;amp; Early Warning System</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-xs sm:text-sm font-mono text-brand-grayText max-w-xl mx-auto tracking-wider uppercase"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Integrated with Aerial Surveillance Module (ASM) for Humanitarian Protection</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="pt-2 flex flex-wrap justify-center gap-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;a href="#deployments" class="px-6 py-3 rounded-full bg-brand-blue text-white text-xs font-mono font-bold hover:bg-brand-brightBlue transition glow-blue flex items-center space-x-2 bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span&gt;INTERACTIVE DEPLOYMENT MAP&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/&gt;&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;a href="#catalog" class="px-6 py-3 rounded-full glass-card text-xs font-mono font-bold text-white hover:border-brand-cyan/50 transition bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>HARDWARE CATALOGUE</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- PERMANENT PLAIN ENGLISH SUMMARY BOX --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-3xl mx-auto bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 text-left space-y-2 mt-4 shadow-lg backdrop-blur-md"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="flex items-center space-x-2 text-amber-300 font-mono text-xs font-bold"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-base"&gt;💡&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span&gt;EXHIBITION QUICK SUMMARY (IN SIMPLE WORDS)&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="text-xs sm:text-sm text-amber-100/90 leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;strong&gt;What is PAXIS?&lt;/strong&gt; PAXIS is an intelligent safety system that uses ground cameras, computer software, and a civilian quadcopter drone to watch crowded areas like railway stations, schools, stadium exits, air raid shelters, and refugee camps. If an emergency happens and people panic, PAXIS detects dangerous crowding in seconds and triggers warning lights and sirens before a stampede can start.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Telemetry Stats Strip --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card p-3 text-center bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xl sm:text-2xl font-bold text-white block font-mono"&gt;&amp;lt; 1.5s&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono"&gt;Alert Latency&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card p-3 text-center bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xl sm:text-2xl font-bold text-brand-cyan block font-mono"&gt;99.2%&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono"&gt;Spatial Coverage&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card p-3 text-center bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xl sm:text-2xl font-bold text-brand-brightBlue block font-mono"&gt;100%&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono"&gt;Civilian Focus&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card p-3 text-center bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xl sm:text-2xl font-bold text-white block font-mono"&gt;Dual-Layer&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[9px] sm:text-[10px] text-brand-grayText uppercase font-mono"&gt;Ground + Aerial&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== EXECUTIVE ABSTRACT ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="abstract" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-white/10 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-6xl mx-auto space-y-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-mono text-brand-cyan uppercase"&gt;SECTION 01 — HUMANITARIAN SCOPE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1"&gt;EXECUTIVE ABSTRACT&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-grayText mt-2 md:mt-0"&gt;PAXIS PREVENTATIVE PARADIGM&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid md:grid-cols-12 gap-8 items-start"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="md:col-span-7 space-y-4 text-xs sm:text-sm text-brand-lightGray leading-relaxed"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- PERMANENT PLAIN ENGLISH SUMMARY CALLOUT --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="bg-cyan-950/40 border border-brand-cyan/40 p-4 rounded-xl space-y-1.5 shadow-md"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="flex items-center space-x-2 text-brand-cyan font-mono text-xs font-bold"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span&gt;💡 IN SIMPLE WORDS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;p class="text-xs sm:text-sm text-white leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>In times of fire, sudden alarms, or war evacuations, most injuries happen because scared people rush to the same narrow exit at once. Traditional security cameras only watch and record; they don't predict danger. PAXIS uses smart software to spot panic instantly and warn people before crushing occurs.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>During military conflicts, severe industrial disasters, or regional crises, civilians gather in dense clusters at safe zones, border evacuation checkpoints, air-raid shelters, refugee transit camps, and disaster relief centers. Similarly, high-density public venues—such as railway stations, shopping malls, religious gatherings, stadiums, and school emergency assembly points—experience acute congestion during sudden alarms.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>In these high-stress situations, instinctual panic triggers immediate mass egress. Casualties frequently stem not directly from the initial threat, but from uncontrolled crush pressures and bottlenecks occurring within seconds.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>Traditional CCTV networks record events passively but fail to provide predictive situational awareness due to physical blind spots and human operator fatigue during chaotic incidents.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;strong class="text-white"&gt;PAXIS&lt;/strong&gt; bridges this gap by combining Ground Vision Monitoring with a civilian Aerial Surveillance Module (ASM). Computer vision algorithms calculate crowd density metrics, velocity vectors, and running anomalies in real time, triggering immediate edge-level alerts via Arduino edge hardware while the drone offers real-time aerial verification.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="glass-card-accent p-4 border-l-4 border-l-brand-cyan mt-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="text-xs font-mono font-bold text-brand-cyan uppercase mb-1"&gt;War &amp;amp; Peace Relevance&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;p class="text-xs text-brand-lightGray leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Peace is defined by the active protection of human life. PAXIS serves as a non-offensive, dual-use technological shield for humanitarian corridors and evacuation points, ensuring orderly mass movement and preventing panic casualties.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Interactive Blueprint Diagram Card --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="md:col-span-5 glass-card p-4 sm:p-5 space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center border-b border-white/10 pb-2 text-xs font-mono"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-brand-cyan font-bold"&gt;HUMANITARIAN TRANSIT ECOSYSTEM&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-brand-grayText"&gt;SENSING LAYERS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg class="w-full h-auto max-h-[240px]" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;rect x="20" y="175" width="280" height="35" rx="4" fill="#121212" stroke="#ffffff" stroke-width="0.5"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="28" y="195" fill="#86868b" font-family="monospace" font-size="7"&gt;BORDER TRANSIT / REFUGEE EVACUATION CORRIDOR&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;g fill="#06b6d4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;circle cx="50" cy="190" r="3"/&gt;&lt;circle cx="60" cy="197" r="3"/&gt;&lt;circle cx="75" cy="187" r="3"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;circle cx="85" cy="195" r="3"/&gt;&lt;circle cx="100" cy="190" r="3"/&gt;&lt;circle cx="115" cy="197" r="3"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/g&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;g fill="#2997ff"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;circle cx="130" cy="193" r="3"/&gt;&lt;circle cx="140" cy="188" r="3"/&gt;&lt;circle cx="150" cy="199" r="3"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/g&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;ellipse cx="145" cy="193" rx="35" ry="14" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="2 2"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="115" y="170" fill="#ef4444" font-family="monospace" font-size="7" font-weight="bold"&gt;PANIC BOTTLENECK&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;path d="M30 175 L30 95" stroke="#ffffff" stroke-width="1.5"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;circle cx="30" cy="93" r="4" fill="#0071e3"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;polygon points="30,93 80,170 160,170" fill="#0071e3" opacity="0.2"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;g transform="translate(220, 50)"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;rect x="-12" y="-6" width="24" height="12" rx="3" fill="#1e1e1e" stroke="#06b6d4" stroke-width="0.8"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;circle cx="0" cy="0" r="3" fill="#2997ff"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;polygon points="0,6 -70,125 30,125" fill="#06b6d4" opacity="0.15"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;text x="-30" y="-14" fill="#06b6d4" font-family="monospace" font-size="6.5"&gt;ASM CIVILIAN SCAN&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/g&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-[10px] font-mono text-brand-grayText bg-white/5 p-2 rounded"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>Multi-angle spatial telemetry preventing density threshold breach in evacuation zones.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== SYSTEM ARCHITECTURE ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="architecture" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-white/10 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-6xl mx-auto space-y-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-mono text-brand-cyan uppercase"&gt;SECTION 02 — DATA PIPELINE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1"&gt;SYSTEM ARCHITECTURE&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-grayText mt-2 md:mt-0"&gt;END-TO-END HARDWARE-SOFTWARE TELEMETRY&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Interactive Architecture Diagram --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="glass-card p-4 sm:p-6 space-y-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-xs font-mono text-brand-cyan font-bold"&gt;TAP ANY STEP BELOW TO SEE HOW IT WORKS:&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-amber-300"&gt;💡 Interactive Node Inspector&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 text-center text-xs font-mono"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('crowd')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-brand-grayText block"&gt;01. SOURCE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;Public Crowd&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('esp32')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-brand-cyan block"&gt;02. GROUND&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;ESP32-CAM&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('laptop')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-brand-brightBlue block"&gt;03. HOST&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;AI Laptop&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('opencv')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-brand-cyan block"&gt;04. VISION&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;OpenCV&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('mediapipe')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-brand-cyan block"&gt;05. POSE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;MediaPipe&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('ml')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none border-brand-blue bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-brand-brightBlue block"&gt;06. MODEL&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;Risk Engine&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('arduino')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-teal-400 block"&gt;07. EDGE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;Arduino Uno&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="inspectNode('actuator')" class="glass-card p-2.5 sm:p-3 hover:border-brand-cyan transition text-left space-y-1 focus:outline-none border-red-500/50 bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-[9px] text-red-400 block"&gt;08. ALERT&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="font-bold text-white text-[11px]"&gt;LED / Buzzer&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Dynamic Node Inspector Display --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div id="node-inspector" class="glass-card-accent p-4 border-l-4 border-l-brand-cyan space-y-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center space-x-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="p-1.5 rounded bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan font-mono text-xs font-bold"&gt;NODE 01&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;h4 id="node-title" class="text-sm font-bold text-white"&gt;Public Crowd / Evacuee Density&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-3 pt-1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="bg-black/40 p-3 rounded-lg border border-white/10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block"&gt;TECHNICAL SPECIFICATION&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="node-desc" class="text-xs text-brand-lightGray leading-relaxed mt-1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>Raw human spatial mass located at transit hubs, relief shelters, or evacuation bottlenecks. Provides physical motion inputs.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="bg-amber-500/10 border border-amber-500/30 p-3 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-[10px] font-mono text-amber-300 font-bold block"&gt;💡 IN SIMPLE WORDS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="node-simple" class="text-xs text-amber-100 leading-relaxed mt-1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>This represents people walking, standing, or evacuating in crowded public places or refugee camps.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== HARDWARE ECOSYSTEM ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="ecosystem" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-white/10 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-6xl mx-auto space-y-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-mono text-brand-cyan uppercase"&gt;SECTION 03 — ARCHITECTURE OVERVIEW&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1"&gt;PAXIS HARDWARE ECOSYSTEM&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-grayText mt-2 md:mt-0"&gt;SUBSYSTEM CATEGORY DIRECTORY&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-xs sm:text-sm text-brand-grayText max-w-3xl"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>The PAXIS platform integrates distinct hardware subsystems into one unified decision-support engine. Select a category below to inspect its architectural role and constituent components.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Category Tabs (Swipeable on Mobile) --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-1" id="ecosystem-tabs"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button onclick="switchEcosystemTab('ground')" id="tab-ground" class="eco-tab px-4 py-2 rounded-full glass-card text-xs font-mono border-brand-cyan text-white bg-brand-cyan/20 shadow-[0_0_15px_rgba(6,182,212,0.3)] bouncy-hover whitespace-nowrap shrink-0"&gt;Ground Monitoring Unit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button onclick="switchEcosystemTab('aerial')" id="tab-aerial" class="eco-tab px-4 py-2 rounded-full glass-card text-xs font-mono text-brand-grayText hover:text-white bouncy-hover whitespace-nowrap shrink-0"&gt;Aerial Monitoring Unit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button onclick="switchEcosystemTab('processing')" id="tab-processing" class="eco-tab px-4 py-2 rounded-full glass-card text-xs font-mono text-brand-grayText hover:text-white bouncy-hover whitespace-nowrap shrink-0"&gt;Processing Unit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button onclick="switchEcosystemTab('alert')" id="tab-alert" class="eco-tab px-4 py-2 rounded-full glass-card text-xs font-mono text-brand-grayText hover:text-white bouncy-hover whitespace-nowrap shrink-0"&gt;Alert Unit&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button onclick="switchEcosystemTab('power')" id="tab-power" class="eco-tab px-4 py-2 rounded-full glass-card text-xs font-mono text-brand-grayText hover:text-white bouncy-hover whitespace-nowrap shrink-0"&gt;Power System&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;button onclick="switchEcosystemTab('comm')" id="tab-comm" class="eco-tab px-4 py-2 rounded-full glass-card text-xs font-mono text-brand-grayText hover:text-white bouncy-hover whitespace-nowrap shrink-0"&gt;Communication Mesh&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Ecosystem Content Display --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="ecosystem-display" class="glass-card p-5 sm:p-6 space-y-4 border-l-4 border-l-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Dynamic Content Rendered via JS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== HARDWARE CATALOGUE ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="catalog" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-white/10 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-6xl mx-auto space-y-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-mono text-brand-cyan uppercase"&gt;SECTION 04 — HARDWARE SPECIFICATIONS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1"&gt;COMPONENT HARDWARE CATALOGUE&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-grayText mt-2 md:mt-0"&gt;TECHNICAL OVERVIEW&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-xs sm:text-sm text-brand-grayText max-w-3xl"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Engineering catalogue of verified hardware components forming the PAXIS system. Detailed specifications, pinouts, and datasheets are accessible via the component router.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Hardware Cards Grid --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6" id="catalog-grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Cards dynamically populated in JavaScript --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== REAL WORLD DEPLOYMENTS ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="deployments" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-white/10 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-6xl mx-auto space-y-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-mono text-brand-cyan uppercase"&gt;SECTION 05 — INTERACTIVE MAP&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1"&gt;REAL WORLD DEPLOYMENT EXPERIENCE&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-grayText mt-2 md:mt-0"&gt;CIVILIAN &amp;amp; HUMANITARIAN SITES&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid lg:grid-cols-12 gap-6 sm:gap-8 items-start"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Map Hotspot Container --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="lg:col-span-7 glass-card p-4 sm:p-6 space-y-4 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-xs font-mono text-brand-cyan mb-2"&gt;TAP A HOTSPOT TO INSPECT DEPLOYMENT CASE STUDY&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="w-full h-72 sm:h-80 relative bg-[#121212] rounded-xl border border-white/10 overflow-hidden flex items-center justify-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;!-- World/India Vector Grid Background --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;svg class="w-full h-full opacity-30" viewBox="0 0 600 350" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;path d="M50 100 L550 100 M50 200 L550 200 M150 50 L150 300 M300 50 L300 300 M450 50 L450 300" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="4 4"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;circle cx="300" cy="180" r="120" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="2 4"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/svg&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;!-- Hotspot Markers --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;button onclick="selectDeployment('railway')" class="absolute top-[25%] left-[20%] group focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-4 h-4 rounded-full bg-brand-cyan block animate-ping absolute opacity-75"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-3.5 h-3.5 rounded-full bg-brand-cyan block border-2 border-white shadow-[0_0_10px_#06b6d4]"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="absolute top-5 left-0 text-[10px] font-mono text-white bg-black/80 px-1.5 py-0.5 rounded border border-white/20 whitespace-nowrap"&gt;Railway Hub&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;button onclick="selectDeployment('border')" class="absolute top-[40%] left-[35%] group focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-4 h-4 rounded-full bg-brand-brightBlue block animate-ping absolute opacity-75"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-3.5 h-3.5 rounded-full bg-brand-brightBlue block border-2 border-white shadow-[0_0_10px_#2997ff]"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="absolute top-5 left-0 text-[10px] font-mono text-white bg-black/80 px-1.5 py-0.5 rounded border border-white/20 whitespace-nowrap"&gt;Border Evacuation&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;button onclick="selectDeployment('shelter')" class="absolute top-[60%] left-[50%] group focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-4 h-4 rounded-full bg-teal-400 block animate-ping absolute opacity-75"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-3.5 h-3.5 rounded-full bg-teal-400 block border-2 border-white shadow-[0_0_10px_#2dd4bf]"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="absolute top-5 left-0 text-[10px] font-mono text-white bg-black/80 px-1.5 py-0.5 rounded border border-white/20 whitespace-nowrap"&gt;Disaster Relief Camp&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;button onclick="selectDeployment('stadium')" class="absolute top-[30%] left-[70%] group focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-4 h-4 rounded-full bg-yellow-400 block animate-ping absolute opacity-75"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-3.5 h-3.5 rounded-full bg-yellow-400 block border-2 border-white shadow-[0_0_10px_#facc15]"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="absolute top-5 left-0 text-[10px] font-mono text-white bg-black/80 px-1.5 py-0.5 rounded border border-white/20 whitespace-nowrap"&gt;Stadium Evacuation&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;button onclick="selectDeployment('school')" class="absolute top-[70%] left-[75%] group focus:outline-none bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-4 h-4 rounded-full bg-purple-400 block animate-ping absolute opacity-75"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="w-3.5 h-3.5 rounded-full bg-purple-400 block border-2 border-white shadow-[0_0_10px_#c084fc]"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="absolute top-5 left-0 text-[10px] font-mono text-white bg-black/80 px-1.5 py-0.5 rounded border border-white/20 whitespace-nowrap"&gt;School Assembly&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;!-- Deployment Information Panel --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div id="deployment-panel" class="lg:col-span-5 glass-card p-5 sm:p-6 space-y-4 border-l-4 border-l-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-xs font-mono text-brand-cyan uppercase font-bold"&gt;DEPLOYMENT PROFILE&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h3 id="dep-title" class="text-xl font-bold text-white"&gt;Railway Concourse &amp;amp; Exit Corridors&lt;/h3&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-3 text-xs text-brand-lightGray leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-[10px] font-mono text-brand-grayText uppercase block"&gt;Operational Problem&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="dep-problem"&gt;Extreme passenger density during peak hours and sudden evacuation panic creating bottlenecks at staircases.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase block"&gt;PAXIS Intervention&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="dep-solution"&gt;Fixed ESP32-CAMs monitor platform staircases continuously; ASM drone dispatches over overhead bridges during alerts.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue uppercase block"&gt;Expected Humanitarian Benefits&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="dep-benefits"&gt;Early detection of crowd turbulence, automated buzzer alerts, and rapid intervention before crush pressures mount.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ==================== DOCUMENTATION MODE HUB ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="doc-hub" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-white/10 relative"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="max-w-6xl mx-auto space-y-10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col md:flex-row md:items-end justify-between border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-xs font-mono text-brand-cyan uppercase"&gt;SECTION 06 — DOCUMENTATION NAVIGATION&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1"&gt;TECHNICAL DOCUMENTATION HUB&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-grayText mt-2 md:mt-0 font-bold"&gt;SYSTEM SPECIFICATION SUITE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div onclick="openDocHubModal('Technical Documentation')" class="glass-card p-5 space-y-3 cursor-pointer border border-white/10 hover:border-brand-cyan/60 transition bouncy-hover group"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-xs font-mono text-brand-cyan font-bold"&gt;DOCS-01&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="w-2 h-2 rounded-full bg-brand-cyan"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-sm font-bold text-white group-hover:text-brand-cyan transition"&gt;Technical Documentation&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-brand-grayText leading-relaxed"&gt;Mathematical derivations, optical flow algorithms, and crowd turbulence equations.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue block pt-2 font-bold"&gt;OPEN SPECIFICATIONS &amp;rarr;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div onclick="openDocHubModal('Component Database')" class="glass-card p-5 space-y-3 cursor-pointer border border-white/10 hover:border-brand-cyan/60 transition bouncy-hover group"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-xs font-mono text-brand-cyan font-bold"&gt;DOCS-02&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="w-2 h-2 rounded-full bg-brand-brightBlue"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-sm font-bold text-white group-hover:text-brand-cyan transition"&gt;Component Database&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-brand-grayText leading-relaxed"&gt;Hardware pinouts, operating voltage parameters, and clock speeds.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue block pt-2 font-bold"&gt;OPEN SPECIFICATIONS &amp;rarr;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div onclick="openDocHubModal('Assembly Guide')" class="glass-card p-5 space-y-3 cursor-pointer border border-white/10 hover:border-brand-cyan/60 transition bouncy-hover group"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-xs font-mono text-brand-cyan font-bold"&gt;DOCS-03&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="w-2 h-2 rounded-full bg-teal-400"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-sm font-bold text-white group-hover:text-brand-cyan transition"&gt;Assembly Guide&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-brand-grayText leading-relaxed"&gt;Step-by-step physical build roadmap, mounting, and hardware wiring.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue block pt-2 font-bold"&gt;OPEN SPECIFICATIONS &amp;rarr;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div onclick="openDocHubModal('Circuit Diagrams')" class="glass-card p-5 space-y-3 cursor-pointer border border-white/10 hover:border-brand-cyan/60 transition bouncy-hover group"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-xs font-mono text-brand-cyan font-bold"&gt;DOCS-04&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="w-2 h-2 rounded-full bg-purple-400"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="text-sm font-bold text-white group-hover:text-brand-cyan transition"&gt;Circuit Diagrams&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-brand-grayText leading-relaxed"&gt;High-resolution schematic diagrams, relay outputs, and power delivery rails.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue block pt-2 font-bold"&gt;OPEN SPECIFICATIONS &amp;rarr;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ==================== FOOTER ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;footer class="border-t border-white/10 py-10 px-6 bg-[#090909]"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs font-mono text-brand-grayText space-y-4 md:space-y-0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span class="text-white font-bold"&gt;PAXIS v2.0&lt;/span&gt; • STEAM Exhibition Submission</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Theme: War or Peace — Civilian Protection Focus</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Doc Ref: PXS-2026-STEAM</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ==================== MODALS ==================== --&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Component Detail Router Modal --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="catalog-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="glass-card max-w-2xl w-full p-5 sm:p-6 space-y-5 max-h-[90vh] overflow-y-auto border-brand-cyan/50 shadow-[0_0_50px_rgba(6,182,212,0.2)]"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="flex justify-between items-start border-b border-white/10 pb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-cyan" id="modal-comp-id"&gt;COMP-01&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-xl sm:text-2xl font-bold text-white" id="modal-comp-title"&gt;ESP32-CAM Ground Vision Node&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button onclick="closeCatalogModal()" class="text-brand-grayText hover:text-white font-mono text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10"&gt;✕ CLOSE&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="space-y-4 text-xs text-brand-lightGray leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-[10px] font-mono text-brand-grayText uppercase block"&gt;PURPOSE &amp;amp; SELECTION RATIONALE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p id="modal-comp-purpose"&gt;Low-cost edge vision node providing constant video telemetry.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-2 gap-4 bg-white/5 p-3 rounded-xl font-mono text-[11px]"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-brand-cyan block"&gt;Interface:&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span id="modal-comp-interface"&gt;Wi-Fi 802.11 b/g/n / UART&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-brand-brightBlue block"&gt;Power:&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span id="modal-comp-power"&gt;5V DC / 180mA peak&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="border-t border-white/10 pt-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-xs font-mono text-brand-cyan font-bold block mb-2"&gt;TECHNICAL DOCUMENTATION NAVIGATION&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="flex flex-wrap gap-2 text-[10px] font-mono"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-brand-brightBlue"&gt;Specifications &amp;amp; Pinout&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-brand-brightBlue"&gt;Datasheets (PDF)&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-brand-brightBlue"&gt;Assembly &amp;amp; Wiring Tutorial&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Technical Documentation Suite Modal --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="doc-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="glass-card max-w-3xl w-full p-5 sm:p-6 space-y-5 max-h-[85vh] overflow-y-auto border-brand-cyan/50 shadow-[0_0_50px_rgba(6,182,212,0.25)]"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="flex justify-between items-center border-b border-white/10 pb-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center space-x-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="w-2.5 h-2.5 rounded-full bg-brand-cyan animate-pulse"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;h3 class="text-lg sm:text-xl font-bold text-white font-mono" id="doc-modal-title"&gt;Technical Documentation&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button onclick="closeDocHubModal()" class="text-brand-grayText hover:text-white font-mono text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10"&gt;✕ CLOSE PREVIEW&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div id="doc-modal-body" class="space-y-4 text-xs font-mono text-brand-lightGray leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Dynamic rich documentation injected via JS --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- ==================== JAVASCRIPT LOGIC ==================== --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Mobile Off-Canvas Drawer Menu Toggle</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function toggleMobileMenu() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const menu = document.getElementById('mobile-menu');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (menu) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>menu.classList.toggle('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// DYNAMIC NAVBAR SCROLL ANIMATION (SHRINK / EXPAND)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const navHeader = document.getElementById('nav-header');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const navPill = document.getElementById('nav-pill');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const navLinks = document.querySelectorAll('.nav-link');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function updateNavbarOnScroll() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const winScroll = document.body.scrollTop || document.documentElement.scrollTop;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const scrolled = (winScroll / height) * 100;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const scrollProgress = document.getElementById('scroll-progress');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (scrollProgress) scrollProgress.style.width = scrolled + '%';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (navHeader &amp;&amp; navPill) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (winScroll &gt; 40) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// Compact scroll state - elegant frosted glass without cutting text!</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navHeader.classList.remove('top-5', 'max-w-5xl');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navHeader.classList.add('top-2', 'max-w-4xl');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navPill.classList.remove('bg-[#090909]/70', 'py-3', 'px-6', 'border-white/15');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navPill.classList.add('bg-black/85', 'py-2', 'px-4', 'border-brand-cyan/40', 'shadow-[0_8px_30px_rgba(6,182,212,0.2)]', 'backdrop-blur-3xl');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// Top expanded state</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navHeader.classList.remove('top-2', 'max-w-4xl');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navHeader.classList.add('top-5', 'max-w-5xl');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navPill.classList.remove('bg-black/85', 'py-2', 'px-4', 'border-brand-cyan/40', 'shadow-[0_8px_30px_rgba(6,182,212,0.2)]', 'backdrop-blur-3xl');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>navPill.classList.add('bg-[#090909]/70', 'py-3', 'px-6', 'border-white/15');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Active Section Highlighting</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const sections = document.querySelectorAll('section[id]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let currentSection = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>sections.forEach(section =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const sectionTop = section.offsetTop - 140;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (winScroll &gt;= sectionTop) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>currentSection = section.getAttribute('id');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>navLinks.forEach(link =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>link.classList.remove('text-brand-cyan', 'bg-brand-cyan/10');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (link.getAttribute('href') === `#${currentSection}`) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>link.classList.add('text-brand-cyan', 'bg-brand-cyan/10');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.addEventListener('scroll', updateNavbarOnScroll);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>window.addEventListener('load', updateNavbarOnScroll);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Particle Canvas Animation</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const canvas = document.getElementById('hero-canvas');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (canvas) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const ctx = canvas.getContext('2d');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let width = canvas.width = window.innerWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let height = canvas.height = window.innerHeight;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>window.addEventListener('resize', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>width = canvas.width = window.innerWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>height = canvas.height = window.innerHeight;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const particles = Array.from({ length: 35 }, () =&gt; ({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>x: Math.random() * width,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>y: Math.random() * height,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>vx: (Math.random() - 0.5) * 0.3,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>vy: (Math.random() - 0.5) * 0.3,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>radius: Math.random() * 1.5 + 0.5</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>function animateCanvas() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.clearRect(0, 0, width, height);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.fillStyle = 'rgba(6, 182, 212, 0.4)';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>particles.forEach(p =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>p.x += p.vx;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>p.y += p.vy;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (p.x &lt; 0) p.x = width;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (p.x &gt; width) p.x = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (p.y &lt; 0) p.y = height;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (p.y &gt; height) p.y = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.beginPath();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.fill();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>requestAnimationFrame(animateCanvas);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>animateCanvas();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Node Inspector for System Architecture</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const nodes = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>crowd: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Public Crowd / Evacuee Density",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Raw human spatial mass located at transit hubs, relief shelters, or evacuation bottlenecks. Provides physical motion inputs.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "People walking, standing, or evacuating in crowded public spaces or refugee camps."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>esp32: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Ground ESP32-CAM Module",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Captures 30 FPS video feed at elevated viewing angles; streams video over local Wi-Fi mesh to central workstation.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "A tiny, low-cost camera mounted high on a pole watching the main crowd area continuously."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>laptop: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Central Workstation Host",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "High-performance host running OpenCV, MediaPipe, and custom computer vision risk evaluation models.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "The main computer station where all camera video feeds are analyzed in real time."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>opencv: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "OpenCV Computer Vision Layer",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Handles video frame decoding, noise filtering, optical flow computation, and background subtraction.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "Smart video software that converts raw video pictures into motion measurements."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>mediapipe: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "MediaPipe Spatial Analytics",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Extracts body pose landmarks and bounding boxes to estimate individual velocity and directional vectors.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "Software that tracks individual human movement speed and direction to detect sudden running."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ml: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Crowd Analytics &amp; Risk Engine",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Evaluates directional chaos, density thresholds, and sudden acceleration to compute overall panic index.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "The AI brain that calculates if a crowd is starting to panic or crush together dangerously."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>arduino: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Arduino Edge Actuator",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Receives serial signal triggers from host workstation to actuate localized hardware alarms instantaneously.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "A reliable micro-chip controller that directly triggers the physical alarm lights and buzzers."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>actuator: {<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Visual &amp; Acoustic Warning Array",<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "High-decibel piezo buzzers and high-intensity LED strobe panels providing immediate early warning to crowds.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>simple: "Bright flashing lights and loud sirens that alert people and security officers instantly."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function inspectNode(key) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const data = nodes[key];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (data) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('node-title').innerText = data.title;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('node-desc').innerText = data.desc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('node-simple').innerText = data.simple;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Hardware Ecosystem Subsystem Details</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const ecosystemData = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ground: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Ground Monitoring Unit (GMU)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Fixed elevated optical node engineered for persistent baseline surveillance. Operates continuously along transit hallways, refugee intake corridors, and public venue exits.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>specs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Primary Sensor: OV2640 2-Megapixel CMOS Camera Sensor",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Streaming Resolution: SVGA (800x600) @ 25 FPS over local Wi-Fi",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Mounting Elevation: 3.5 - 5.0 meters at 30-degree downward incline",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Power Draw: 5V DC / 180mA nominal operational current"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>components: ["ESP32-CAM Module", "OV2640 Camera Lens", "High-Gain Wi-Fi Antenna", "5V Power Regulator Circuit"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>aerial: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Aerial Monitoring Unit (ASM Drone)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Lightweight civilian surveillance quadcopter dispatched on-demand. Provides instant overhead top-down perspective to eliminate structural blind spots behind walls, pillars, and emergency shelter gates.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>specs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Airframe: Lightweight plastic composite quadcopter (Non-weaponized)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Flight Controller: Manual 2.4GHz RF pilot transmitter link",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Optical Transmitter: Secondary ESP32-CAM aerial stream unit",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Flight Endurance: 18 - 22 minutes per 3S 11.1V 1500mAh LiPo"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>components: ["Composite Quadcopter Frame", "Brushless Flight Motors", "2.4GHz Receiver", "Aerial ESP32-CAM Node"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>processing: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Central Processing &amp; AI Host Engine",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "High-performance computational workstation receiving concurrent video feeds. Executes OpenCV optical flow tracking, MediaPipe spatial pose evaluation, and automated risk scoring algorithms.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>specs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Vision Pipeline: OpenCV 4.x + MediaPipe Python Runtime",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Frame Processing Latency: ~33ms per frame (30 FPS pipeline)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Panic Score Output: Scaled Risk Index (0 - 100) computed in real-time",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Communications: Serial USB / RS232 link to Arduino Edge Controller"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>components: ["Multi-core Host Laptop", "OpenCV Frame Ingestion Module", "MediaPipe Pose Estimator", "Serial Dispatcher"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>alert: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Edge Alert &amp; Actuation Unit",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Deterministic hardware controller interfaced with localized early warning beacons. Triggers visual strobe lights and acoustic alarms within 100ms of risk threshold breach.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>specs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Core Microcontroller: ATmega328P (Arduino Uno R3 Platform)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Actuation Latency: &lt; 15ms from serial command arrival",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Alert Outputs: 12V High-Intensity Strobe LEDs + 110dB Piezo Buzzers",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Failsafe Mode: Local hardware override button for emergency personnel"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>components: ["Arduino Uno Board", "MOSFET Driver Relays", "High-Intensity LED Panels", "110dB Piezo Buzzer"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>power: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Power Delivery System (PDS)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Dual-rail isolated power network providing steady DC voltage to ground sensors, AI processing station, and edge alert hardware during grid power cuts.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>specs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Main Rail: 12V DC Regulated Lead-Acid/LiFePO4 Power Reservoir",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Logic Step-Down: LM2596 Buck Converters providing 5V 3A for ESP32/Arduino",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Isolation: Optocoupler isolation between power relays and microcontroller logic",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Battery Backup: 6-8 hours autonomous run time for edge alert nodes"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>components: ["12V Power Reservoir", "LM2596 Voltage Buck Regulators", "Optocoupler Isolators", "Fuse Protection Matrix"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>comm: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Dual-Band Communication Mesh",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>desc: "Low-latency wireless network linking ground ESP32 nodes, aerial quadcopter video streams, and the primary AI workstation into a robust local network.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>specs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Network Protocol: 802.11 b/g/n Wi-Fi local access point (No internet needed)",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Data Bandwidth: 12-18 Mbps total video throughput across dual cameras",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Range: 150m line-of-sight coverage around emergency evacuation site",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>"Baud Rate: 115200 bps serial link between AI Host and Arduino"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>components: ["Dual-Band Access Point", "2.4GHz Wi-Fi Antennas", "USB-UART FTDI Interfaces", "Low-Latency Video Streamer"]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function switchEcosystemTab(tabKey) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const data = ecosystemData[tabKey];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!data) return;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const tabs = document.querySelectorAll('.eco-tab');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>tabs.forEach(tab =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tab.classList.remove('border-brand-cyan', 'text-white', 'bg-brand-cyan/20', 'shadow-[0_0_15px_rgba(6,182,212,0.3)]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tab.classList.add('text-brand-grayText', 'hover:text-white');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const activeTab = document.getElementById(`tab-${tabKey}`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (activeTab) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>activeTab.classList.remove('text-brand-grayText', 'hover:text-white');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>activeTab.classList.add('border-brand-cyan', 'text-white', 'bg-brand-cyan/20', 'shadow-[0_0_15px_rgba(6,182,212,0.3)]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('ecosystem-display').innerHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex justify-between items-start border-b border-white/10 pb-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-cyan border border-brand-cyan/30 px-2.5 py-0.5 rounded-full bg-brand-cyan/10"&gt;SUBSYSTEM PROFILE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-lg sm:text-xl font-bold text-white mt-1.5"&gt;${data.title}&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue hidden sm:inline"&gt;PAXIS HARDWARE ARCHITECTURE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-xs text-brand-lightGray leading-relaxed"&gt;${data.desc}&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid md:grid-cols-2 gap-4 pt-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block"&gt;TECHNICAL SPECIFICATIONS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul class="text-[11px] text-brand-grayText space-y-1 list-disc pl-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>${data.specs.map(s =&gt; `&lt;li&gt;${s}&lt;/li&gt;`).join('')}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-brightBlue uppercase font-bold block"&gt;KEY HARDWARE MODULES&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-wrap gap-1.5 pt-1"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>${data.components.map(c =&gt; `&lt;span class="px-2.5 py-1 rounded-md bg-black/60 border border-white/10 text-[10px] font-mono text-white"&gt;${c}&lt;/span&gt;`).join('')}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Initialize default tab</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>switchEcosystemTab('ground');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Component Hardware Catalog Data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const catalogItems = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>id: "COMP-01",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "ESP32-CAM Ground Node",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>purpose: "Optical sensor node for continuous ground surveillance.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overview: "Microcontroller with integrated OV2640 camera module and Wi-Fi capability.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>whySelected: "Extremely cost-effective, compact form factor, low power draw, and capable of video streaming.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>role: "Fixed elevated sensor monitoring concourses and shelter gates.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>interface: "Wi-Fi 802.11 b/g/n / UART",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>power: "5V DC / 180mA peak",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>adv: "Autonomous streaming, ultra-compact.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lim: "Limited onboard vision processing capacity."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>id: "COMP-02",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "ESP32-CAM Aerial Node",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>purpose: "Lightweight camera transmitter mounted on civilian drone.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overview: "Modified ESP32-CAM module optimized for aerial wireless video transmission.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>whySelected: "Minimal weight footprint ensuring quadcopter flight efficiency.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>role: "Provides top-down overhead video stream of unmonitored blind spots.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>interface: "Wi-Fi 2.4GHz Video Stream",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>power: "3.7V LiPo / 160mA",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>adv: "Ultra-lightweight, seamless integration.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lim: "Requires line-of-sight Wi-Fi antenna alignment."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>id: "COMP-03",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Arduino Uno Edge Actuator",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>purpose: "Edge microcontroller triggering physical warning systems.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overview: "ATmega328P based microcontroller board handling physical I/O alerts.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>whySelected: "High industrial reliability, deterministic timing, and instant hardware actuation.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>role: "Receives serial commands from processing workstation to trigger buzzers/LEDs.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>interface: "USB Serial / GPIO Digital Pins",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>power: "7-12V DC / 50mA",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>adv: "Failsafe operation, zero operating system latency.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lim: "No native video processing capability."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>id: "COMP-04",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Workstation Processing Host",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>purpose: "Primary computational engine executing computer vision pipeline.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overview: "High-performance multi-core laptop processing live camera streams.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>whySelected: "Capable of real-time MediaPipe pose estimation across multiple feeds.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>role: "Runs OpenCV, MediaPipe, Risk Engine, and outputs serial alert triggers.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>interface: "USB 3.0 / Wi-Fi / Ethernet",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>power: "19V DC Power Adapter",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>adv: "High FPS multi-stream processing.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lim: "Requires dedicated power source."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>id: "COMP-05",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Civilian Quadcopter Frame",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>purpose: "Aerial Surveillance Module (ASM) mobile platform.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overview: "Lightweight composite quadcopter airframe engineered for civilian monitoring.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>whySelected: "Stable flight characteristics, non-threatening appearance, non-military build.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>role: "Carries Aerial ESP32-CAM over crowd bottlenecks on command.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>interface: "2.4GHz Manual Flight Transmitter",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>power: "11.1V 3S LiPo Battery",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>adv: "Rapid aerial deployment over obstacles.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lim: "Flight duration bounded by battery capacity."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>id: "COMP-06",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Warning LED &amp; Piezo Array",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>purpose: "Localized early warning beacon system.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overview: "High-intensity LED strobe panels paired with high-decibel acoustic buzzers.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>whySelected: "Clear visual and audible perception even in loud, chaotic environments.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>role: "Alerts crowds and safety personnel immediately upon threshold breach.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>interface: "Digital Relay / MOSFET Driver",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>power: "12V DC / 500mA",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>adv: "Instant human perception across large areas.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lim: "Requires elevated mounting for maximum visibility."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function renderCatalog() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const grid = document.getElementById('catalog-grid');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (grid) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>grid.innerHTML = catalogItems.map(item =&gt; `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card p-5 flex flex-col justify-between space-y-4 hover:border-brand-cyan/50 transition bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="flex justify-between items-center border-b border-white/10 pb-2 mb-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs font-mono text-brand-cyan font-bold"&gt;${item.id}&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="text-[10px] font-mono text-brand-grayText"&gt;HARDWARE CATALOGUE&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;h3 class="text-base sm:text-lg font-bold text-white mb-1"&gt;${item.title}&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;p class="text-xs text-brand-lightGray mb-3 leading-relaxed"&gt;${item.purpose}&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="space-y-2 text-[11px] text-brand-grayText border-t border-white/5 pt-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;&lt;strong class="text-white"&gt;Role:&lt;/strong&gt; ${item.role}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;&lt;strong class="text-white"&gt;Interface:&lt;/strong&gt; ${item.interface}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onclick="openCatalogModal('${item.id}')" class="w-full py-2.5 rounded-xl glass-card border-brand-cyan/40 text-xs font-mono text-brand-cyan font-bold hover:bg-brand-cyan/10 transition bouncy-hover"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>LEARN MORE &amp;rarr;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>`).join('');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>renderCatalog();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function openCatalogModal(id) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const item = catalogItems.find(i =&gt; i.id === id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!item) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('modal-comp-id').innerText = item.id;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('modal-comp-title').innerText = item.title;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('modal-comp-purpose').innerText = item.purpose + " " + item.whySelected;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('modal-comp-interface').innerText = item.interface;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('modal-comp-power').innerText = item.power;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('catalog-modal').classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function closeCatalogModal() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('catalog-modal').classList.add('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Real World Deployment Experience Data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const deployments = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>railway: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Railway Concourse &amp; Platform Exits",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>problem: "Extreme passenger density during peak hours and sudden evacuation panic creating bottlenecks at staircases.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>solution: "Fixed ESP32-CAMs monitor platform staircases continuously; ASM drone dispatches over overhead bridges during alerts.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>benefits: "Early detection of crowd turbulence, automated buzzer alerts, and rapid intervention before crush pressures mount."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Border Evacuation Checkpoints",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>problem: "Mass refugee queues accumulating at narrow transit gates under extreme stress and rumor propagation.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>solution: "Dual-layer monitoring tracks queue growth rates and flags sudden directional surges toward border gates.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>benefits: "Ensures orderly civilian processing and prevents dangerous overcrowding at border control posts."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>shelter: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Disaster Relief &amp; Air Raid Shelters",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>problem: "Surge crowding at subterranean shelter entrances during emergency sirens leading to crush injuries.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>solution: "PAXIS ground sensors monitor entrance queue velocity; automated LED panels guide evacuees to secondary doors.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>benefits: "Maximizes intake efficiency while preserving human safety during urgent shelter access."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>stadium: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "Stadium &amp; Event Arena Exits",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>problem: "Simultaneous mass exit after events or emergency alarms causing severe bottlenecking at turnstiles.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>solution: "ASM aerial quadcopter streams real-time gate congestion map to stadium operations control room.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>benefits: "Allows security staff to dynamically open auxiliary exit gates before crowd pressure reaches threshold."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>school: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>title: "School Emergency Assembly Points",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>problem: "Uncoordinated student movement during fire drills or security alerts leading to staircase congestion.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>solution: "Low-cost ESP32-CAM nodes mounted at hallway intersections monitor evacuation flow rates.",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>benefits: "Provides administrators with real-time visibility to direct classes along safer, uncrowded exit paths."</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function selectDeployment(key) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const dep = deployments[key];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!dep) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('dep-title').innerText = dep.title;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('dep-problem').innerText = dep.problem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('dep-solution').innerText = dep.solution;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('dep-benefits').innerText = dep.benefits;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// FULL TECHNICAL DOCUMENTATION SUITE</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const docSuite = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"Technical Documentation": `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card-accent p-3 border-l-4 border-l-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block"&gt;DOCS-01 // MATHEMATICAL &amp;amp; ALGORITHMIC MODELS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4 class="text-sm font-bold text-white"&gt;PAXIS Crowd Risk &amp;amp; Turbulence Derivations&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="bg-amber-500/10 border border-amber-500/30 p-3 rounded-lg text-xs text-amber-100 leading-relaxed"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;strong&gt;💡 Simple Explanation:&lt;/strong&gt; The AI measures two main things: (1) how tightly packed people are, and (2) how fast/chaotically people are moving. If both get too high, it triggers the alarm.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="text-xs leading-relaxed"&gt;The core AI risk engine calculates crowd panic probability using spatial density ($\rho$) and velocity vector variance ($T$):&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="bg-black/60 p-3 rounded-xl border border-white/10 font-mono text-[11px] space-y-1 text-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;1. Spatial Density: &amp;rho; = N / A<span class="Apple-converted-space">  </span>(Humans per m²)&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;2. Velocity Turbulence Index: T = &amp;sqrt;(&amp;sigma;&lt;sub&gt;vx&lt;/sub&gt;² + &amp;sigma;&lt;sub&gt;vy&lt;/sub&gt;²)&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;3. Panic Index Score: R = (&amp;alpha; &amp;middot; &amp;rho;) + (&amp;beta; &amp;middot; T) + (&amp;gamma; &amp;middot; a&lt;sub&gt;mean&lt;/sub&gt;)&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;p class="text-xs leading-relaxed"&gt;When the computed Risk Index $R$ exceeds threshold $R_{crit} = 75$, the serial interface dispatches an instantaneous trigger pulse to the edge Arduino controller to actuate visual strobes and acoustic buzzers.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"Component Database": `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card-accent p-3 border-l-4 border-l-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block"&gt;DOCS-02 // HARDWARE PINOUTS &amp;amp; PARAMETERS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4 class="text-sm font-bold text-white"&gt;Full Subsystem Specification Matrix&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="overflow-x-auto"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;table class="w-full text-left border-collapse text-[11px] font-mono"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;thead&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr class="border-b border-white/10 text-brand-cyan bg-white/5"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;th class="p-2"&gt;MODULE&lt;/th&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;th class="p-2"&gt;MICROCONTROLLER&lt;/th&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;th class="p-2"&gt;CLOCK&lt;/th&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;th class="p-2"&gt;VOLTAGE&lt;/th&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;th class="p-2"&gt;INTERFACE&lt;/th&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/thead&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;tbody class="divide-y divide-white/5 text-brand-lightGray"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2 font-bold text-white"&gt;Ground Node&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;ESP32-32S Dual Core&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;240 MHz&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;5V DC&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;Wi-Fi / RTSP&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2 font-bold text-white"&gt;Aerial Node&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;ESP32-CAM Slim&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;240 MHz&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;3.7V LiPo&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;2.4GHz Stream&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2 font-bold text-white"&gt;Edge Actuator&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;ATmega328P&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;16 MHz&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;5V / 12V&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;td class="p-2"&gt;USB Serial / GPIO&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/tbody&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/table&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"Assembly Guide": `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card-accent p-3 border-l-4 border-l-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block"&gt;DOCS-03 // PHYSICAL BUILD ROADMAP&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4 class="text-sm font-bold text-white"&gt;Step-by-Step Hardware Assembly Sequence&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="space-y-2 text-[11px]"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="p-2.5 rounded bg-white/5 border border-white/10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;strong class="text-white block"&gt;Phase 1: ESP32-CAM Flashing &amp;amp; Antenna Setup&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-brand-grayText"&gt;Flash custom C++ RTSP streaming firmware using FTDI programmer at 115200 baud. Connect 3dBi external IPEX antenna.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="p-2.5 rounded bg-white/5 border border-white/10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;strong class="text-white block"&gt;Phase 2: Quadcopter Gimbal &amp;amp; Camera Mount&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-brand-grayText"&gt;Mount aerial ESP32-CAM on 3D-printed vibration-dampened camera bracket beneath quadcopter frame.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="p-2.5 rounded bg-white/5 border border-white/10"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;strong class="text-white block"&gt;Phase 3: Arduino Relay &amp;amp; Warning Beacon Wiring&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span class="text-brand-grayText"&gt;Connect Arduino Pin 8 to MOSFET driver gate for 12V LED strobe array; connect Pin 9 to 110dB piezo buzzer.&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"Circuit Diagrams": `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="glass-card-accent p-3 border-l-4 border-l-brand-cyan"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="text-[10px] font-mono text-brand-cyan uppercase font-bold block"&gt;DOCS-04 // ELECTRICAL SCHEMATICS&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4 class="text-sm font-bold text-white"&gt;PAXIS Edge Controller Wiring Schematic&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="bg-black/80 p-3 rounded-xl border border-white/10 flex justify-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg class="w-full h-44" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;rect x="20" y="20" width="90" height="110" rx="4" fill="#1e1e1e" stroke="#06b6d4" stroke-width="1"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="32" y="40" fill="#06b6d4" font-family="monospace" font-size="8"&gt;ESP32-CAM&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="32" y="60" fill="#86868b" font-family="monospace" font-size="6"&gt;5V <span class="Apple-converted-space">  </span>GND&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="32" y="80" fill="#86868b" font-family="monospace" font-size="6"&gt;U0TX U0RX&lt;/text&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;path d="M110 50 L180 50" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="2 2"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="125" y="45" fill="#06b6d4" font-family="monospace" font-size="6"&gt;Wi-Fi RTSP&lt;/text&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;rect x="180" y="20" width="100" height="110" rx="4" fill="#1e1e1e" stroke="#0071e3" stroke-width="1"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="190" y="40" fill="#2997ff" font-family="monospace" font-size="8"&gt;ARDUINO UNO&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="190" y="70" fill="#86868b" font-family="monospace" font-size="6"&gt;PIN 8 (LED)&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="190" y="90" fill="#86868b" font-family="monospace" font-size="6"&gt;PIN 9 (BUZZER)&lt;/text&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;path d="M280 68 L330 68" stroke="#ef4444" stroke-width="1.5"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;path d="M280 88 L330 88" stroke="#eab308" stroke-width="1.5"/&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;rect x="330" y="55" width="55" height="25" rx="3" fill="#18181b" stroke="#ef4444" stroke-width="0.8"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="336" y="70" fill="#ef4444" font-family="monospace" font-size="7"&gt;12V STROBE&lt;/text&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;rect x="330" y="85" width="55" height="25" rx="3" fill="#18181b" stroke="#eab308" stroke-width="0.8"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;text x="336" y="100" fill="#eab308" font-family="monospace" font-size="7"&gt;BUZZER&lt;/text&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function openDocHubModal(title = "Technical Documentation") {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('doc-modal-title').innerText = title;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const content = docSuite[title] || docSuite["Technical Documentation"];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('doc-modal-body').innerHTML = content;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('doc-modal').classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function closeDocHubModal() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById('doc-modal').classList.add('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
