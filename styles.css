@@ -376,26 +376,33 @@ to{transform:translateX(480px)}
 .site-header{top:12px;width:calc(100% - 22px)}
 .nav-shell,.site-header.is-compact .nav-shell{height:48px;padding:0 12px 0 15px;gap:11px}
 .nav-brand{font-size:12px}
-.menu-toggle{display:flex;order:3;margin-left:auto;width:31px;height:31px;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
-.menu-toggle span{display:block;width:17px;height:1px;background:#c2d0d3}
-.nav-links{display:none;position:absolute;top:56px;left:0;right:0;padding:9px;border:1px solid rgba(210,239,240,.16);border-radius:15px;background:rgba(9,14,19,.94);backdrop-filter:blur(20px);flex-wrap:wrap;justify-content:flex-start;gap:3px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
-.nav-links.is-open{display:flex}
-.nav-links a{padding:10px 9px;font-size:9px}
-.hero{padding-top:145px;display:block;min-height:790px}
+.menu-toggle{display:flex;order:3;margin-left:auto;width:34px;height:34px;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;position:relative;z-index:2}
+.menu-toggle span{display:block;width:17px;height:1px;background:#c2d0d3;transition:transform .32s cubic-bezier(.2,.8,.2,1),opacity .2s,background .2s}
+.site-header.is-menu-open .menu-toggle span:first-child{transform:translateY(3px) rotate(45deg);background:var(--cyan)}
+.site-header.is-menu-open .menu-toggle span:last-child{transform:translateY(-3px) rotate(-45deg);background:var(--cyan)}
+.nav-links{display:flex;position:absolute;top:56px;left:0;right:0;max-height:0;overflow:hidden;padding:0 10px;border:1px solid transparent;border-radius:18px;background:rgba(9,14,19,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;box-shadow:0 18px 40px rgba(0,0,0,0);opacity:0;pointer-events:none;transform:translateY(-9px) scale(.98);transform-origin:top;transition:max-height .42s cubic-bezier(.2,.8,.2,1),padding .42s cubic-bezier(.2,.8,.2,1),opacity .24s ease,transform .42s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
+.nav-links.is-open{max-height:350px;padding:7px 10px;opacity:1;pointer-events:auto;transform:translateY(0) scale(1);border-color:rgba(210,239,240,.16);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.nav-links a{padding:12px 10px;border-bottom:1px solid rgba(210,239,240,.09);font-size:10px;opacity:0;transform:translateY(-5px);transition:color .2s,opacity .28s ease,transform .32s cubic-bezier(.2,.8,.2,1)}
+.nav-links a:last-child{border-bottom:0}
+.nav-links.is-open a{opacity:1;transform:translateY(0)}
+.nav-links.is-open a:nth-child(2){transition-delay:.04s}.nav-links.is-open a:nth-child(3){transition-delay:.08s}.nav-links.is-open a:nth-child(4){transition-delay:.12s}.nav-links.is-open a:nth-child(5){transition-delay:.16s}
+.hero{padding:123px 0 38px;display:grid;grid-template-columns:1fr;gap:29px;min-height:0}
 .hero-copy{position:relative;z-index:2}
 h1{font-size:clamp(79px,25vw,118px);margin-bottom:27px}
 .hero-lead{font-size:31px}
 .hero-summary{font-size:13px;max-width:345px}
-.cta-row{max-width:335px}
-.button{min-height:44px;padding-left:14px;gap:10px;font-size:10px}
+.cta-row{display:grid;grid-template-columns:1fr 1fr;max-width:none;width:100%;gap:8px}
+.cta-row .button{justify-content:space-between;min-width:0}
+.cta-row .text-link{grid-column:1/-1;margin:4px 0 0}
+.button{min-height:44px;padding-left:14px;gap:8px;font-size:9px}
 .text-link{margin-left:1px}
-.hero-console{top:auto;right:-75px;bottom:58px;width:390px;height:260px;opacity:.8;transform:perspective(700px) rotateY(-12deg) rotateX(2deg)}
+.hero-console{position:relative;inset:auto;width:100%;height:260px;opacity:1;transform:none;margin:0}
 .scan-field{height:174px}
 .data-a{top:13%;right:-27px}
 .data-b{display:none}
-.hero-radar{width:470px;right:-51%;top:43%}
+.hero-radar{width:470px;right:-51%;top:45%}
 .hero-orbit{display:none}
-.scroll-cue{bottom:20px}
+.scroll-cue{position:relative;bottom:auto;left:auto;margin-top:-5px}
 .eyebrow{font-size:9px;margin-bottom:19px}
 .split-title h2,.context-copy h2,.future-header h2,.docs-copy h2,.final-cta h2{font-size:46px}
 .split-title>p{font-size:13px}
