@@ -49,8 +49,18 @@ toggle.addEventListener('click', () => {
   const open = toggle.getAttribute('aria-expanded') === 'true';
   toggle.setAttribute('aria-expanded', String(!open));
   navLinks.classList.toggle('is-open', !open);
+  header.classList.toggle('is-menu-open', !open);
 });
-navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {toggle.setAttribute('aria-expanded', 'false'); navLinks.classList.remove('is-open');}));
+function closeMenu() {
+  toggle.setAttribute('aria-expanded', 'false');
+  navLinks.classList.remove('is-open');
+  header.classList.remove('is-menu-open');
+}
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+document.addEventListener('click', event => {
+  if (!header.contains(event.target) && navLinks.classList.contains('is-open')) closeMenu();
+});
 
 const observer = new IntersectionObserver(entries => entries.forEach(entry => {if (entry.isIntersecting) {entry.target.classList.add('is-visible'); observer.unobserve(entry.target);}}), {threshold: .14});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
